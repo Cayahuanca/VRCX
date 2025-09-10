@@ -286,8 +286,9 @@ div[style*='margin: 0px 0px 10px;'] {
 }
 input[type='text']::placeholder,
 input[type='number']::placeholder,
+input[type='password']::placeholder,
 .el-textarea__inner::placeholder {
-    color: rgb(var(--md-sys-color-on-surface-variant));
+    color: #c7c7c7;
 }
 input[type='text'],
 input[type='number'],
