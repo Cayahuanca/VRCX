@@ -3,7 +3,6 @@
         class="x-dialog"
         :visible="visible"
         :title="t('dialog.group_calendar.header')"
-        :show-close="false"
         width="90vw"
         height="80vh"
         @close="closeDialog">
@@ -69,7 +68,7 @@
                     <div class="search-container">
                         <el-input
                             v-model="searchQuery"
-                            placeholder="Search groups or events..."
+                            :placeholder="t('dialog.group_calendar.search_placeholder')"
                             clearable
                             size="small"
                             prefix-icon="el-icon-search"
@@ -97,7 +96,7 @@
                             </div>
                         </div>
                         <div v-else class="no-events">
-                            {{ searchQuery ? 'No matching events found' : 'No events this month' }}
+                            {{ searchQuery ? t('dialog.group_calendar.search_no_matching') : t('dialog.group_calendar.search_no_this_month') }}
                         </div>
                     </div>
                 </div>
